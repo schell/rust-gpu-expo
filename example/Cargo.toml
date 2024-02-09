@@ -1,0 +1,20 @@
+[package]
+name = "example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["lib", "dylib"]
+
+[features]
+default = ["level0", "level1", "level2", "level3"]
+level0 = []
+level1 = []
+level2 = []
+level3 = []
+
+[dependencies]
+crabslab = { version = "0.3", default-features = false }
+spirv-std = "0.9"

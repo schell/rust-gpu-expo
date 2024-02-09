@@ -9,13 +9,16 @@ edition = "2021"
 crate-type = ["lib", "dylib"]
 
 [features]
-default = ["level0", "level1", "level2", "level3", "level4", "level5"]
+default = ["level0", "level1", "level2", "level3", "level4", "level5", "level6", "level7"]
+baseline = []
 level0 = []
-level1 = []
-level2 = []
-level3 = []
-level4 = []
-level5 = []
+level1 = ["level0"]
+level2 = ["level0", "level1"]
+level3 = ["level0", "level1", "level2"]
+level4 = ["level0", "level1", "level2", "level3"]
+level5 = ["level0", "level1", "level2", "level3", "level4"]
+level6 = ["level0", "level1", "level2", "level3", "level4", "level5"]
+level7 = ["level0", "level1", "level2", "level3", "level4", "level5", "level6"]
 
 [dependencies]
 crabslab = { version = "0.3", default-features = false }
